@@ -2,6 +2,7 @@ import CabinList from "@/app/_components/CabinList";
 import { Suspense } from "react";
 import Spinner from "@/app/_components/Spinner";
 import Filter from "../_components/Filter";
+import ReservationReminder from "../_components/ReservationReminder";
 
 // export const revalidate = 0; // so to make page dynamic, page is regenerated on every request, data will be fetched on every request
 export const revalidate = 3600; // not makes a lot sense, cause we use dynamic rendering because of url param
@@ -33,6 +34,7 @@ export default function Page({ searchParams }) {
 
       <Suspense fallback={<Spinner />} key={filter}>
         <CabinList filter={filter} />
+        <ReservationReminder />
       </Suspense>
     </div>
   );
