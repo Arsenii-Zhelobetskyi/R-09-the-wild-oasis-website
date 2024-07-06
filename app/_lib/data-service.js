@@ -142,8 +142,9 @@ export async function getCountries() {
       "https://restcountries.com/v2/all?fields=name,flag"
     );
     const countries = await res.json();
+
     return countries;
-  } catch {
+  } catch (error) {
     throw new Error("Could not fetch countries");
   }
 }

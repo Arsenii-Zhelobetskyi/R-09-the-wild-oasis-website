@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 import { auth, signIn, signOut } from "./auth";
 import { supabase } from "./supabase";
 import { getBookings } from "./data-service";
-
+import { redirect } from "next/navigation";
 export async function updateGuest(formData) {
   const session = await auth();
   if (!session) throw new Error("You must be logged in");
@@ -27,6 +27,42 @@ export async function updateGuest(formData) {
     throw new Error("Guest could not be updated");
   }
   revalidatePath("/account/profile"); // will revalidate all cache for this path
+}
+
+export async function updateReservation(formData) {
+  // authentication
+  const session = await auth();
+  if (!session) throw new Error("You must be logged in");
+  const bookingId = Number(formData.get("bookingId"));
+
+  // authorization
+  const guestBookings = await getBookings(session.user.guestId);
+  const guestBookingsIds = guestBookings.map((booking) => booking.id);
+
+  if (!guestBookingsIds.includes(bookingId)) {
+    throw new Error("Booking does not belong to you");
+  }
+
+  const numGuests = Number(formData.get("numGuests"));
+  const observations = formData.get("observations").slice(0, 1000);
+  const updateData = { numGuests, observations };
+
+  const { data, error } = await supabase
+    .from("bookings")
+    .update(updateData)
+    .eq("id", bookingId)
+    .select()
+    .single();
+
+  if (error) {
+    console.error(error);
+    throw new Error("Booking could not be updated");
+  }
+
+  revalidatePath("/account/reservations");
+  revalidatePath(`/account/reservations/edit/${bookingId}`);
+
+  redirect("/account/reservations");
 }
 
 export async function deleteReservation(bookingId) {
