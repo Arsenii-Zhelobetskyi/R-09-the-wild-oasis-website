@@ -1,4 +1,4 @@
-![Vercel](http://r-09-the-wild-oasis-website.vercel.app/?app=therealsujitk-vercel-badge)
+![Vercel Deploy](https://deploy-badge.vercel.app/vercel/r-09-the-wild-oasis-website)
 
 <h1 align="center">🏠The Wild Oasis website🌲</h1>
 <h3 align="center">🛌Full stack website to make reservations🛏️</h3>
