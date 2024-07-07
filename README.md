@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Vercel Deploy](https://deploy-badge.vercel.app/vercel/r-09-the-wild-oasis-website)
 
-## Getting Started
+<h1 align="center">🏠The Wild Oasis website🌲</h1>
+<h3 align="center">🛌Full stack website to make reservations🛏️</h3>
+<h3 align="center" >⚛️This is  main project that was created during the Jonas Schmedtmann react course⚛️</h3>
 
-First, run the development server:
+## ▶️Demonstration:
+<img src="./public/the-wild-oasis-website.gif" />
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 This app is example of:
+- ⏭️ How to use "Next.js"
+- 👮 How to use "Next-auth"
+- 💙 How to use "Tailwind"
+- ⚡ How to use "Supabase"
+- ➕ How to add arguments to function with "bind" method
+- 😀 How to use "useOptimistic"
+- 🚟 How to use "Suspend"
+- 🎬 How to use "Server actions"
+- 🪪 How to make revalidation
+- 📦 How to deal with navigation, metadata, folder structure, fonts, layout
+- 🪆 How to use different components one inside another (SS in CS & CS in SS)
+- 📖 How to add "Context API" to the app
+- 📞 How to add "API"
+- 🍏 How to use "App" folder structure instead of "Pages"
+- 📃 How to deal with cache, dynamic routing, share data between different components(SS,CS)
+- 💽 How to implement different optimisation tehniques(nesting etc.)
+- 👻 How to use "useTransition"
+- 🆔 How to implement Google login 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+  
+<div align="center">
+<h3 style="background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045); -webkit-background-clip: text; -webkit-text-fill-color: transparent;" 
+> View a live demo of the project here:</h3>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+[![my_button](https://img.shields.io/badge/click_me-37a779?style=for-the-badge)](https://r-09-the-wild-oasis-website.vercel.app/)
 
-## Learn More
+[![my_button](https://img.shields.io/badge/🟦🟨-37a779?style=for-the-badge)](https://www.youtube.com/watch?v=G510jeWiaV0)
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+</div>
