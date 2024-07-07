@@ -25,6 +25,7 @@
 - 📃 How to deal with cache, dynamic routing, share data between different components(SS,CS)
 - 💽 How to implement different optimisation tehniques(nesting etc.)
 - 👻 How to use "useTransition"
+- 🆔 How to implement Google login 
 
 
   
